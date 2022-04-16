@@ -18,8 +18,8 @@ echo COPY desafio2_app.py /home/myapp/ >> Dockerfile
 echo EXPOSE 5050 >> Dockerfile
 echo CMD python3 /home/myapp/desafio2_app.py >> Dockerfile
 
-docker build -t desafio2_app;
+docker build -t nombreapp .;
 
-docker run -t -d -p 5050:5050 --desafio2_app desafio2_app desafio2_app;
+docker run -t -d -p 5050:5050 --name nombreapprunning nombreapp;
 
 docker ps -a;
